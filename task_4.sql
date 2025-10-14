@@ -1,15 +1,12 @@
-USE alx_book_store;
-
+-- Print full description of the table 'Books'
 SELECT 
-    TABLE_NAME,
-    COLUMN_NAME,
-    COLUMN_TYPE,
-    IS_NULLABLE,
-    COLUMN_DEFAULT,
-    COLUMN_KEY,
-    EXTRA
-FROM 
-    INFORMATION_SCHEMA.COLUMNS
-WHERE 
-    TABLE_SCHEMA = 'alx_book_store'
-    AND TABLE_NAME = 'books';
+    COLUMN_NAME AS 'Column',
+    COLUMN_TYPE AS 'Type',
+    IS_NULLABLE AS 'Nullable',
+    COLUMN_KEY AS 'Key',
+    COLUMN_DEFAULT AS 'Default',
+    EXTRA AS 'Extra'
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Books'
+ORDER BY ORDINAL_POSITION;
+
