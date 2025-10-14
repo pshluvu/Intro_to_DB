@@ -1,6 +1,6 @@
-USE alx_book_store;
+-- Print full description of the table 'books'
+SHOW COLUMNS FROM books;
 
-SHOW CREATE TABLE books;
 
 
 
